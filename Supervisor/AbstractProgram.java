@@ -1,9 +1,5 @@
 package Supervisor;
 
-/* Абстрактная программа работает в отдельном потоке и является классом с полем перечисляемого типа, который
-        отражает ее состояние (UNKNOWN, STOPPING, RUNNING, FATAL ERROR) и имеет поток демон случайного состояния,
-        который в заданном интервале меняет её состояние на случайное. */
-
 public class AbstractProgram implements Runnable {
     private final Object bell = new Object();
     private Utils.State current_state;
